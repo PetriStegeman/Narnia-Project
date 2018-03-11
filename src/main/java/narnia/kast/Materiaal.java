@@ -1,5 +1,5 @@
 package narnia.kast;
 
 public enum Materiaal {
-    HOUT, METAAL, STEEN;
+    HOUT, METAAL, STEEN, DIAMAND;
 }

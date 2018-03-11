@@ -10,6 +10,8 @@ public class Narnia {
 
     public static void main(String[] args) {
 
+        int attempt = 1;
+
         Aslan deOneAslan = new Aslan(false);
         Kast mijnKast = kastBuilder();
 
@@ -23,7 +25,7 @@ public class Narnia {
 
             Nanny mijnNanny = nannyApproaches(getNannyMightHear());
 
-            mijnNanny.nannyPunishment(mijnNanny);
+            mijnNanny.nannyPunishment();
 
             mijnKast.schopTegenKast(mijnPersoon);
 
@@ -53,7 +55,8 @@ public class Narnia {
             else{
                 System.out.println("Het is tijd om je zoektocht opnieuw te beginnen...");
             }
-
+        attempt++;
+            System.out.println("Het koste je " + attempt + " pogingen om Aslan te bereiken");
         }while (!deOneAslan.isMetAslan());
     }
 

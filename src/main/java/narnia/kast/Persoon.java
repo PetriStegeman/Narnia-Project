@@ -1,7 +1,5 @@
 package narnia.kast;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Persoon {
@@ -10,7 +8,7 @@ public class Persoon {
     private static int experience = 0;
 
     public static Persoon kickStrength(){
-        int randomPower = ThreadLocalRandom.current().nextInt(1, 9 + 1);
+        int randomPower = ThreadLocalRandom.current().nextInt(1, 100 + 1);
         return new Persoon(randomPower);
     }
 
@@ -50,10 +48,6 @@ public class Persoon {
 
     public int getPower() {
         return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
     }
 
     public static int getExperience() {

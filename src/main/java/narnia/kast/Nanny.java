@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Nanny {
 
-    private static final int nannyMightHear = 18;
+    private static final int nannyMightHear = 99;
 
     private boolean doesNannyHear;
 
@@ -14,7 +14,7 @@ public class Nanny {
 
     public static Nanny nannyApproaches(int nannyMightHear) {
 
-        int nannyRandom = ThreadLocalRandom.current().nextInt(1, 20 + 1);
+        int nannyRandom = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 
         if (nannyRandom > nannyMightHear) {
             System.out.println("De Nanny heeft je betrapt! Bad boy/girl/other!");
@@ -25,7 +25,7 @@ public class Nanny {
         }
     }
 
-    public void nannyPunishment(Nanny badNanny){
+    public void nannyPunishment(){
         if (doesNannyHear) {
             try {
                 Thread.sleep(10);
@@ -42,13 +42,5 @@ public class Nanny {
 
     public static int getNannyMightHear() {
         return nannyMightHear;
-    }
-
-    public boolean isDoesNannyHear() {
-        return doesNannyHear;
-    }
-
-    public void setDoesNannyHear(boolean doesNannyHear) {
-        this.doesNannyHear = doesNannyHear;
     }
 }
